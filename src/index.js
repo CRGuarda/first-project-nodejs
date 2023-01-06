@@ -10,7 +10,6 @@ app.get("/employees", (req, res) => {
 
 app.post("/employees", (req, res) => {
   res.send("creando employees");
-  console.log(req.body);
 });
 
 app.put("/employees", (req, res) => res.send("actualizando employees"));

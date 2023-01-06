@@ -1,5 +1,5 @@
 import express from "express";
-import { DB_PORT } from "./config.js";
+import { PORT } from "./config.js";
 
 const app = express();
 app.use(express.json());
@@ -17,5 +17,5 @@ app.put("/employees", (req, res) => res.send("actualizando employees"));
 
 app.delete("/employees", (req, res) => res.send("eliminando employees"));
 
-app.listen(DB_PORT);
+app.listen(PORT);
 console.log("hello world");

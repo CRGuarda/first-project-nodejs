@@ -1,20 +1,5 @@
-import express from "express";
 import { PORT } from "./config.js";
-
-const app = express();
-app.use(express.json());
-
-app.get("/employees", (req, res) => {
-  res.send("obteniendo employees");
-});
-
-app.post("/employees", (req, res) => {
-  res.send("creando employees");
-});
-
-app.put("/employees", (req, res) => res.send("actualizando employees"));
-
-app.delete("/employees", (req, res) => res.send("eliminando employees"));
+import app from "./app.js";
 
 app.listen(PORT);
-console.log("hello world");
+console.log(`Server running on port ${PORT}`);
